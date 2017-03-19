@@ -7,8 +7,8 @@ It contains 4 files:
 * run_analysis.R - the script for performing the analysis
 * tidy_data.txt - a tidy data set as requested
 
-# About run_analysis.R
+## About run_analysis.R
 
-# About tidy_data.txt
+## About tidy_data.txt
 
-# About CodeBook.md
+## About CodeBook.md
