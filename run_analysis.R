@@ -2,12 +2,13 @@ library(data.table)
 library(dplyr)
 
 #Download the data, if it's the first time the script runs
-if (!file.exists("UCI HAR Dataset")){
+if (!file.exists("getdata%2Fprojectfiles%2FUCI HAR Dataset.zip")){
     print("Download the file")
     dataset_url <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-    download.file(dataset_url, "dataset.zip", method = "curl")
-    unzip("dataset.zip")
+    download.file(dataset_url, destfile = "getdata%2Fprojectfiles%2FUCI HAR Dataset.zip", method = "curl")
 }
+
+unzip("getdata%2Fprojectfiles%2FUCI HAR Dataset.zip")
 
 ###Load the features names
 dt_labels <- read.table("UCI HAR Dataset/features.txt",header = F, col.names = c("id", "feature"))
