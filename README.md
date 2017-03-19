@@ -18,6 +18,7 @@ If there isn't a sub-directory called "UCI HAR Dataset" in the directory there t
 the script requestes the following packages:
 * data.table
 * dplyr
+
 You have to install them before run the script.
 
 The script writes a file called tidy_data.txt with the data set requested from the assignment.
