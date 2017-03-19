@@ -164,7 +164,7 @@ FrequencyBodyBodyGyroscopeJerkMagnitudeMean..    : num  -0.942 -0.99 -0.995 -0.3
 FrequencyBodyBodyGyroscopeJerkMagnitudeSTD..     : num  -0.933 -0.987 -0.995 -0.382 -0.392 ...
 
  
-###Description of the variables
+### Description of the variables
 
 "subject" - The id of the subject (from 1 to 30)
 "activity" - one of the six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
