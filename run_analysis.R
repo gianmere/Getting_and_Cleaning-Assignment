@@ -4,7 +4,7 @@ library(dplyr)
 #Download the data, if it's the first time the script runs
 if (!file.exists("UCI HAR Dataset")){
     print("Download the file")
-    dataset_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+    dataset_url <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
     download.file(dataset_url, "dataset.zip", method = "curl")
     unzip("dataset.zip")
 }
@@ -52,7 +52,7 @@ dt_all <- dt_all[,selected_column]
 dt_activity_label <- read.table("UCI HAR Dataset/activity_labels.txt", header = F, col.names = c("id","activity"))
 dt_with_Activity_label <- merge(dt_all, dt_activity_label, by.x = "id_activity", by.y = "id")
 
-dt_all <- select(dt_with_Activity_label, -id_activity )
+dt_all <- select(dt_with_Activity_label, -id_activity)
 
 #4. Appropriately labels the data set with descriptive variable names.
 names(dt_all)<-gsub("Acc", "Accelerometer", names(dt_all))
@@ -67,4 +67,4 @@ names(dt_all)<-gsub("-std()", "STD", names(dt_all))
 #5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
 summarize <- dt_all %>% group_by(subject, activity) %>% summarise_all(funs(mean))
-write.table(summarize, file = "./tidy_data.txt")
+write.table(summarize, file = "./tidy_data.txt", row.name=FALSE)
