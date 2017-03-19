@@ -11,7 +11,7 @@ It contains 4 files:
 
 To run the script, go in the directory where it is and use the command:
 
-> source(run_analysis.R)
+source(run_analysis.R)
 
 If there isn't a sub-directory called "UCI HAR Dataset" in the directory there the script runs, it downloads the zip file with all tha datas, unzips it and performs all the oprations to obtain the data set requested from the assignment.
 
@@ -28,8 +28,8 @@ The script writes a file called tidy_data.txt with the data set requested from t
 It contains the data set requested from the assignment.
 
 You can view it going in the directory where it is and using the commands:
-> data <- read.table("tidy_data.txt", header = TRUE)
-> View(data)
+data <- read.table("tidy_data.txt", header = TRUE)
+View(data)
 
 The data set is tidy because it satisfy the properties:
 * Each variable misured is in one column
