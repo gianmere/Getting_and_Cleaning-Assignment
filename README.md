@@ -28,6 +28,7 @@ The script writes a file called tidy_data.txt with the data set requested from t
 It contains the data set requested from the assignment.
 
 You can view it going in the directory where it is and using the commands:
+
 data <- read.table("tidy_data.txt", header = TRUE)
 View(data)
 
