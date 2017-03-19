@@ -13,7 +13,7 @@ To run the script, go in the directory where it is and use the command:
 
 >source(run_analysis.R)
 
-If there isn't a sub-directory called "UCI HAR Dataset" in the directory there the script runs, it downloads the zip file with all tha datas, unzips it and performs all the oprations to obtain the data set requested from the assignment.
+If there isn't a file called "getdata%2Fprojectfiles%2FUCI HAR Dataset.zip" in the directory there the script runs, it downloads the zip file with all tha datas, unzips it and performs all the oprations to obtain the data set requested from the assignment.
 
 the script requestes the following packages:
 * data.table
